@@ -19,6 +19,14 @@ const profileSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  projectname: {
+    type: String,
+    required: true,
+  },
+  projectdescription: {
+    type: String,
+    required: true,
+  },
   skills: [
     {
       type: String,

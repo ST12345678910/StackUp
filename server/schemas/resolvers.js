@@ -14,8 +14,8 @@ const resolvers = {
   },
 
   Mutation: {
-    addProfile: async (parent, { name, email, password }) => {
-      const profile = await Profile.create({ name, email, password });
+    addProfile: async (parent, { name, email, password, projectname, projectdescription }) => {
+      const profile = await Profile.create({ name, email, password, projectname, projectdescription });
       const token = signToken(profile);
 
       return { token, profile };

@@ -11,6 +11,7 @@ const Signup = () => {
     name: '',
     email: '',
     password: '',
+    projectname: '',
   });
   const [addProfile, { error, data }] = useMutation(ADD_PROFILE);
 
@@ -44,7 +45,7 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-light p-2">Sign Up and Add a Project</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -69,14 +70,31 @@ const Signup = () => {
                   value={formState.email}
                   onChange={handleChange}
                 />
-                <input
-                  className="form-input"
-                  placeholder="******"
-                  name="password"
-                  type="password"
-                  value={formState.password}
-                  onChange={handleChange}
-                />
+                  <input
+                    className="form-input"
+                    placeholder="Password"
+                    name="password"
+                    type="password"
+                    value={formState.password}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Project Name"
+                    name="projectname"
+                    type="text"
+                    value={formState.projectname}
+                    onChange={handleChange}
+                  />
+                  <input
+                    className="form-input"
+                    placeholder="Project Description"
+                    name="projectdescription"
+                    type="text"
+                    value={formState.projectdescription}
+                    onChange={handleChange}
+                  />
+                
                 <button
                   className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SkillsList = ({ skills }) => {
   if (!skills.length) {
-    return <h3>No Skills Yet</h3>;
+    return <h3>No one is here...</h3>;
   }
 
   return (

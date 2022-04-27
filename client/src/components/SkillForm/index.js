@@ -36,7 +36,7 @@ const SkillForm = ({ profileId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="Endorse some skills..."
+              placeholder="What are your thoughts?"
               value={skill}
               className="form-input w-100"
               onChange={(event) => setSkill(event.target.value)}

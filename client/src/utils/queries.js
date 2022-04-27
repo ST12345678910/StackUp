@@ -6,6 +6,8 @@ export const QUERY_PROFILES = gql`
       _id
       name
       skills
+      projectname
+      projectdescription
     }
   }
 `;
@@ -16,6 +18,8 @@ export const QUERY_SINGLE_PROFILE = gql`
       _id
       name
       skills
+      projectname
+      projectdescription
     }
   }
 `;

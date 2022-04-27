@@ -23,7 +23,7 @@ const Profile = () => {
   return (
     <div>
       <h2 className="card-header">
-        {profile.name}'s friends have endorsed these skills...
+        {profile.projectname}
       </h2>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}

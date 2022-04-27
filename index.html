@@ -10,6 +10,25 @@
     name="description" 
     content="Web site created using create-react-app" 
   />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +39,10 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <section id="top">
-    <h1 id="mainheader" >Stack Up</h1>
+  <div id="top">
+    <h1 id="mainheader" class="font-Titillium Web">Stack Up</h1>
     <h2 id=""
-  </section>
+  </div>
 
 </body>
 </html>

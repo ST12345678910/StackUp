@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Profile from '../../pages/Profile';
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -9,6 +9,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
+    
     <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
         <Link className="text-dark" to="/">
@@ -21,16 +22,26 @@ const Header = () => {
         </p>
         <div>
           {Auth.loggedIn() ? (
-            <button className="btn btn-lg btn-light m-2" onClick={logout}>
+            <><Link className="btn btn-lg btn-light m-2" to="/">
+              About Us
+            </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/">
+                Projects
+              </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/profiles/:profileId">
+                {Auth.getProfile().data.name}'s Profile
+              </Link>
+              <button className="btn btn-lg btn-light m-2" onClick={logout}>
               Logout
-            </button>
+            </button> 
+            </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                  button
-              </Link>
-                <Link className="btn btn-lg btn-light m-2" to="/signup">
-                  button
+                <Link className="btn btn-lg btn-light m-2" to="/">
+                  About Us
+                </Link>
+                <Link className="btn btn-lg btn-light m-2" to="/">
+                  Projects
                 </Link>
               <Link className="btn btn-lg btn-primary m-2" to="/login">
                 Login

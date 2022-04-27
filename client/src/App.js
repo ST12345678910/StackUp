@@ -55,6 +55,9 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
+            <Route exact path="/me">
+              <Profile />
+            </Route>
             <Route exact path="/profiles/:profileId">
               <Profile />
             </Route>

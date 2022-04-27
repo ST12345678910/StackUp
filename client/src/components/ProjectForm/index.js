@@ -2,24 +2,24 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
 
-import { ADD_THOUGHT } from '../../utils/mutations';
-import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
+import { ADD_PROJECT } from '../../utils/mutations';
+import { QUERY_PROJECTS, QUERY_ME } from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
-const ThoughtForm = () => {
-  const [thoughtText, setThoughtText] = useState('');
+const ProjectForm = () => {
+  const [thoughtText, setProjectText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-    update(cache, { data: { addThought } }) {
+  const [addProject, { error }] = useMutation(ADD_PROJECT, {
+    update(cache, { data: { addProject } }) {
       try {
-        const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+        const { thoughts } = cache.readQuery({ query: QUERY_PROJECTS });
 
         cache.writeQuery({
-          query: QUERY_THOUGHTS,
-          data: { thoughts: [addThought, ...thoughts] },
+          query: QUERY_PROJECTS,
+          data: { thoughts: [addProject, ...thoughts] },
         });
       } catch (e) {
         console.error(e);
@@ -29,7 +29,8 @@ const ThoughtForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+        data: { me: { ...me, thoughts: [...me.thoughts, 
+          addProject] } },
       });
     },
   });
@@ -38,14 +39,14 @@ const ThoughtForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addThought({
+      const { data } = await addProject({
         variables: {
           thoughtText,
           thoughtAuthor: Auth.getProfile().data.username,
         },
       });
 
-      setThoughtText('');
+      setProjectText('');
     } catch (err) {
       console.error(err);
     }
@@ -55,7 +56,7 @@ const ThoughtForm = () => {
     const { name, value } = event.target;
 
     if (name === 'thoughtText' && value.length <= 280) {
-      setThoughtText(value);
+      setProjectText(value);
       setCharacterCount(value.length);
     }
   };
@@ -89,7 +90,7 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-primary btn-block py-3" type="submit" to="/">
                 Add Project/Idea
               </button>
             </div>
@@ -110,4 +111,4 @@ const ThoughtForm = () => {
   );
 };
 
-export default ThoughtForm;
+export default ProjectForm;

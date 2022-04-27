@@ -29,11 +29,6 @@
           }
         }
 
-    /* #top {
-      text-align: center;
-      margin-top: 10%;
-    } */
-
     #mainheader {
       font-weight: bolder;
       font-size: 80px;
@@ -44,7 +39,13 @@
       font-size: x-large;
     }
 
-    
+    .center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 200px;
+}
+
       </style>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -57,15 +58,17 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div id="top" class="font-Titillium Web">
-    <h1 id="mainheader" class="lg:text-center m-">Stack Up</h1>
-    <h2 id="mantra">See how your projects and ideas Stack Up against the rest!</h2>
+    <h1 id="mainheader" class="lg:text-center m-10">Stack Up</h1>
+    <h2 id="mantra" class="text-center">See how your projects and ideas Stack Up against the rest!</h2>
   </div>
   <div id="project cards"></div>
-  <div id="button">
-    <button
-      class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ">
+  <div id="button" class="container">
+    <div class="center">
+      <button
+      class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
       Discover
-    </button>
+      </button>
+    </div>
   </div>
 </body>
 </html>

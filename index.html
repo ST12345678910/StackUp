@@ -28,6 +28,23 @@
             content-visibility: auto;
           }
         }
+
+    /* #top {
+      text-align: center;
+      margin-top: 10%;
+    } */
+
+    #mainheader {
+      font-weight: bolder;
+      font-size: 80px;
+    }
+
+    #mantra {
+      font-weight: 400;
+      font-size: x-large;
+    }
+
+    
       </style>
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -39,10 +56,16 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
-  <div id="top">
-    <h1 id="mainheader" class="font-Titillium Web">Stack Up</h1>
-    <h2 id=""
+  <div id="top" class="font-Titillium Web">
+    <h1 id="mainheader" class="lg:text-center m-">Stack Up</h1>
+    <h2 id="mantra">See how your projects and ideas Stack Up against the rest!</h2>
   </div>
-
+  <div id="project cards"></div>
+  <div id="button">
+    <button
+      class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded ">
+      Discover
+    </button>
+  </div>
 </body>
 </html>

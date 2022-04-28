@@ -25,6 +25,9 @@ const Profile = () => {
       <h2 className="card-header">
         {profile.projectname}
       </h2>
+      <h2 className="card-header">
+        {profile.projectdescription}
+      </h2>
 
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
 

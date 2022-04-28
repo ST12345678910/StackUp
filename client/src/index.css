@@ -1706,3 +1706,12 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
+:root {
+  --primary: #c0c0c0;
+  --secondary: #FF6700;
+  --tertiary: #3A6EA5;
+  --light: #ebebeb;
+  --dark: #004e98;
+}
+

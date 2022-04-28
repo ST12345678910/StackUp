@@ -1,13 +1,13 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
+import ProjectList from '../components/ProjectList';
+import ProjectForm from '../components/ProjectForm';
 
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_PROJECTS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
+  const { loading, data } = useQuery(QUERY_PROJECTS);
   const thoughts = data?.thoughts || [];
 
   return (
@@ -23,7 +23,7 @@ const Home = () => {
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList
+            <ProjectList
               thoughts={thoughts}
               title="Popular Projects"
             />
@@ -32,7 +32,7 @@ const Home = () => {
         <div
           className="col-12 col-md-10 mb-3 p-3 text-center"
         >
-          <ThoughtForm />
+          <ProjectForm />
         </div>
       </div>
     </main>

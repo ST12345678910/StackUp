@@ -15,7 +15,7 @@ export const QUERY_USER = gql`
   }
 `;
 
-export const QUERY_THOUGHTS = gql`
+export const QUERY_PROJECTS = gql`
   query getThoughts {
     thoughts {
       _id
@@ -26,7 +26,7 @@ export const QUERY_THOUGHTS = gql`
   }
 `;
 
-export const QUERY_SINGLE_THOUGHT = gql`
+export const QUERY_SINGLE_PROJECT = gql`
   query getSingleThought($thoughtId: ID!) {
     thought(thoughtId: $thoughtId) {
       _id

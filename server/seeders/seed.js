@@ -1,31 +1,15 @@
 const db = require('../config/connection');
-const { User, Thought } = require('../models');
-const userSeeds = require('./userSeeds.json');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const { Profile } = require('../models');
+const profileSeeds = require('./profileSeeds.json');
 
 db.once('open', async () => {
   try {
-    await Thought.deleteMany({});
-    await User.deleteMany({});
+    await Profile.deleteMany({});
+    await Profile.create(profileSeeds);
 
-    await User.create(userSeeds);
-
-    for (let i = 0; i < thoughtSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Thought.create(thoughtSeeds[i]);
-      const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
-        {
-          $addToSet: {
-            thoughts: _id,
-          },
-        }
-      );
-    }
+    console.log('all done!');
+    process.exit(0);
   } catch (err) {
-    console.error(err);
-    process.exit(1);
+    throw err;
   }
-
-  console.log('all done!');
-  process.exit(0);
 });

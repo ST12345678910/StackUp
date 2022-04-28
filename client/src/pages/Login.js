@@ -48,7 +48,7 @@ const Login = (props) => {
           <div className="card-body">
             {data ? (
               <p>
-                Successfully Logged In. You may now head{' '}
+                Success! You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
@@ -70,7 +70,7 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-info"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >

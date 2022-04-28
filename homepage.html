@@ -40,10 +40,9 @@
     }
 
     .center {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 200px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
 }
 
       </style>
@@ -64,7 +63,8 @@
   <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
     <!--Card 1-->
     <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://tarjimly.org/images/website3/home3/FiveScreenMock2.jpeg" alt="tarjimly">
+      <img class="w-full max-h-48" src="https://tarjimly.org/images/website3/home3/FiveScreenMock2.jpeg" alt="tarjimly">
+      <div class="flex flex-col">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Popular Project1</div>
         <p class="text-gray-700 text-base">
@@ -80,10 +80,12 @@
         <span
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#somethingelse</span>
       </div>
+      </div>
     </div>
     <!--Card 2-->
     <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://miro.medium.com/max/1400/1*6XLoA1UMAHySlZZVFodkVA.png" alt="hospitalrun">
+      <img class="w-full max-h-48" src="https://miro.medium.com/max/1400/1*6XLoA1UMAHySlZZVFodkVA.png" alt="hospitalrun">
+      <div class="flex flex-col">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Popular Project2</div>
         <p class="text-gray-700 text-base">
@@ -99,11 +101,13 @@
         <span
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#somethingelse</span>
       </div>
+      </div>
     </div>
   
     <!--Card 3-->
     <div class="rounded overflow-hidden shadow-lg">
-      <img class="w-full" src="https://www.oppia.org/build/assets/images/splash/matthew_fractions.171d4ef26c4def32e36aa8e282f9c905.png" alt="Oppia">
+      <img class="w-full max-h-48" src="https://www.oppia.org/build/assets/images/splash/matthew_fractions.171d4ef26c4def32e36aa8e282f9c905.png" alt="Oppia">
+      <div class="flex flex-col">
       <div class="px-6 py-4">
         <div class="font-bold text-xl mb-2">Popular Project3</div>
         <p class="text-gray-700 text-base">
@@ -126,7 +130,7 @@
   <div id="button" class="container">
     <div class="center">
       <button
-      class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+      class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded">
       Discover
       </button>
     </div>

@@ -20,6 +20,7 @@ const Profile = () => {
   if (loading) {
     return <div>Loading...</div>;
   }
+if (Auth.loggedIn()) {
   if (profileId === Auth.getProfile().data._id) {
     return <div>
       <h2 className="card-header">
@@ -32,6 +33,7 @@ const Profile = () => {
       {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
     </div>;
   }
+}
   return (
     <div>
       <h2 className="card-header">

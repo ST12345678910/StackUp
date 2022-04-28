@@ -28,8 +28,8 @@ const Header = () => {
               <Link className="btn btn-lg btn-light m-2" to="/">
                 Projects
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/profiles/:profileId">
-                {Auth.getProfile().data.name}'s Profile
+              <Link className="btn btn-lg btn-light m-2" to={`/profiles/${Auth.getProfile().data._id}`}>
+                {Auth.getProfile().data.name}'s Project
               </Link>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
               Logout

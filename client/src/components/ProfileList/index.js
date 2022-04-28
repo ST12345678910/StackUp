@@ -23,12 +23,10 @@ const ProfileList = ({ profiles, title }) => {
                     {profile.skills && profile.skills.length === 1 ? '' : ''}
                   </span>
                 </h4>
-
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
                   to={`/profiles/${profile._id}`}
-                >
-                  Give Feedback and see what others are saying
+                >Join the Discussion
                 </Link>
               </div>
             </div>

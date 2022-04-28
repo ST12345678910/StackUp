@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-
+import Auth from '../utils/auth';
 import SkillsList from '../components/SkillsList';
 import SkillForm from '../components/SkillForm';
 
@@ -19,6 +19,18 @@ const Profile = () => {
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+  if (profileId === Auth.getProfile().data._id) {
+    return <div>
+      <h2 className="card-header">
+        {profile.projectname}
+      </h2>
+      <h2 className="card-header">
+        {profile.projectdescription}
+      </h2>
+
+      {profile.skills?.length > 0 && <SkillsList skills={profile.skills} />}
+    </div>;
   }
   return (
     <div>

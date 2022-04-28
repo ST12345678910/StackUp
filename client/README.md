@@ -10,7 +10,7 @@
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
- ![icard](icardreadmepic.png)
+
 
 ## Installation
 The application is deployed on Heroku <code>[here](put link here)</code>. No installation neccesary.

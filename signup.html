@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    /* @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        } */
+
+    #mainheader {
+      font-weight: bolder;
+      font-size: 80px;
+    }
+
+    #mantra {
+      font-weight: 400;
+      font-size: x-large;
+    }
+
+    #username, #emailAddress, #password, #projectName {
+      margin-bottom: 1rem;
+    }
+
+      </style>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+  <title>Stack Up - Register</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="top" class="font-Titillium Web">
+    <h1 id="mainheader" class="lg:text-center m-10">Stack Up</h1>
+    <h2 id="mantra" class="text-center">See how your projects and ideas Stack Up against the rest!</h2>
+  </div>
+  
+
+  <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md w-full space-y-8">
+      <div>
+        <!-- insert our logo OR can leave without it -->
+        <!-- <img class="mx-auto h-12 w-auto" src="#"
+          alt="Workflow"> -->
+        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Register a New Account</h2>
+        <p class="mt-2 text-center text-sm text-gray-600">
+          Or
+          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Already a User? Click Here to Log in </a>
+        </p>
+      </div>
+      <form class="mt-8 space-y-6" action="#" method="POST">
+        <input type="hidden" name="remember" value="true">
+        <div class="rounded-md shadow-sm -space-y-px">
+          <div>
+            <label for="username" class="sr-only">Username</label>
+            <input id="username" name="username" type="username" autocomplete="username" required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Username">
+          </div>
+          <div>
+            <label for="email-address" class="sr-only">Email address</label>
+            <input id="emailAddress" name="email" type="email" autocomplete="email" required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Email address">
+          </div>
+          <div>
+            <label for="password" class="sr-only">Password</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Password">
+          </div>
+          <div>
+            <label for="projectname" class="sr-only">Project Name</label>
+            <input id="projectName" name="projectname" type="projectname" required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Project name">
+          </div>
+          <div>
+            <label for="projectdescription" class="sr-only">Project Description</label>
+            <input id="projectDescription" name="projectdescription" type="projectdescription" required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Project description">
+          </div>
+        </div>
+  
+        <!-- not sure if we want to add remember me checkbox and forgot your password link since it's not needed to satisfy project requirements -->
+        <!-- <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <input id="remember-me" name="remember-me" type="checkbox"
+              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
+            <label for="remember-me" class="ml-2 block text-sm text-gray-900"> Remember me </label>
+          </div>
+  
+          <div class="text-sm">
+            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> Forgot your password? </a>
+          </div>
+        </div> -->
+  
+        <div>
+          <button type="submit"
+            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500">
+            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+              <!-- Heroicon name: solid/lock-closed -->
+              <!-- <svg class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"> -->
+                <path fill-rule="evenodd"
+                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

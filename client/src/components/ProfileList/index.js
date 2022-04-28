@@ -12,25 +12,25 @@ const ProfileList = ({ profiles, title }) => {
       <div className="flex-row justify-space-between my-4">
         {profiles &&
           profiles.map((profile) => (
+
             <div key={profile._id} className="col-12 col-xl-6">
               <div className="card mb-3">
                 <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {profile.name} <br />
+                  {profile.projectname} by {profile.name} <br />
                   <span className="text-white" style={{ fontSize: '1rem' }}>
                      {profile.skills ? profile.skills.length : 0}{' '}
                     people interested
                     {profile.skills && profile.skills.length === 1 ? '' : ''}
                   </span>
                 </h4>
-
                 <Link
                   className="btn btn-block btn-squared btn-light text-dark"
                   to={`/profiles/${profile._id}`}
-                >
-                  Give Feedback and see what others are saying
+                >Join the Discussion
                 </Link>
               </div>
             </div>
+            
           ))}
       </div>
     </div>

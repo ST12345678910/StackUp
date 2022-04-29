@@ -9,11 +9,11 @@ const ProfileList = ({ profiles, title }) => {
   return (
     <div>
       <h3 className="text-primary">{title}</h3>
-      <div className="flex-row justify-space-between">
+      <div className="flex-row justify-space-between text-center">
         {profiles &&
           profiles.map((profile) => (
 
-            <div key={profile._id} class="rounded overflow-hidden shadow-lg">
+            <div key={profile._id} class="rounded overflow-hidden shadow-lg my-3">
               <img class="w-full" src="https://picsum.photos/250/250" alt="randompic"></img>
       <div class="px-6 py-4">
                 <div class="font-bold text-xl">{profile.projectname} by {profile.name} </div>
@@ -23,10 +23,6 @@ const ProfileList = ({ profiles, title }) => {
                   people interested
                   {profile.skills && profile.skills.length === 1 ? '' : ''}
                 </p>
-
-        <p class="text-gray-700 text-base mt-5">
-          {profile.projectdescription}
-        </p>
         
       </div>
       <div class="px-6 pt-4 pb-2">

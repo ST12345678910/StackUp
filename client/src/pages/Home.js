@@ -11,6 +11,7 @@ const Home = () => {
 
   return (
     <main>
+      <h3 id="mantra" class="text-center mt-12">-Trending Projects-</h3>
       <div className="flex-row justify-center">
         <div className="col-12 col-md-10 my-3">
           {loading ? (
@@ -18,8 +19,9 @@ const Home = () => {
           ) : (
             <ProfileList
               profiles={profiles}
-              title="Popular Projects..."
+              title=""
             />
+           
           )}
         </div>
       </div>

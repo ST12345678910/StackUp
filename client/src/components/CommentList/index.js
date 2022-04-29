@@ -1,21 +1,26 @@
 import React from 'react';
-
+import Auth from '../../utils/auth';
 const CommentList = ({ skills }) => {
   if (!skills.length) {
     return <h3>No one is here...</h3>;
   }
 
   return (
-    <div>
-      <div className="flex-row justify-space-between my-4">
+    <div className="mt-32 bg-gray-100 rounded-xl"> Anonymous users left the following feedback...
+      
+      <div className="flex-col justify-space-between my-4">
         {skills &&
           skills.map((skill) => (
-            <div key={skill} className="col-12 col-xl-6">
-              <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {skill} <br />
+            <div key={skill}>
+                
+              <div className="align-center">
+
+                <h4 className="card rounded-md">
+                 {skill} <br />
                 </h4>
+                
               </div>
+
             </div>
           ))}
       </div>

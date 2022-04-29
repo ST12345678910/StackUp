@@ -43,7 +43,7 @@ const Login = (props) => {
   return (
     <main className="flex-row justify-center mb-4 text-center">
       <div className="col-12 col-lg-10">
-        <div className="card">
+        <div className="">
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Log In</h2>
           <p className="mt-2 text-center text-sm text-gray-600"></p>
             Or<p><a href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500"> Click here to Signup</a></p>

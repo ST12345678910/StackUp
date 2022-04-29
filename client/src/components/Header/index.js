@@ -16,8 +16,8 @@ const Header = () => {
         
         <div>
           {Auth.loggedIn() ? (
-            <><Link className="btn" to="/">
-              About Us
+            <><Link className="btn" to="/aboutus">
+              About
             </Link>
               <Link className="btn" to="/">
                 Projects
@@ -31,8 +31,8 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn" to="/">
-                About Us
+              <Link className="btn" to="/aboutus">
+                About
               </Link>
               <Link className="btn" to="/">
                 Projects
@@ -50,7 +50,6 @@ const Header = () => {
         <div class="font-Titillium Web">
           <h1 id="mainheader" class="text-center m-10">Stack Up</h1>
           <h3 id="mantra" class="text-center">See how your projects and ideas Stack Up against the rest!</h3>
-          <h3 class="mt-16 -mb-12">-Trending Projects-</h3>
         </div>
       </div>
     </header>

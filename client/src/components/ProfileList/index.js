@@ -9,29 +9,32 @@ const ProfileList = ({ profiles, title }) => {
   return (
     <div>
       <h3 className="text-primary">{title}</h3>
-      <div className="flex-row justify-space-between my-4">
+      <div className="flex-row justify-space-between">
         {profiles &&
           profiles.map((profile) => (
 
-            <div key={profile._id} className="col-12 col-xl-6">
-              <div className="card mb-3">
-                <h4 className="card-header bg-dark text-light p-2 m-0">
-                  {profile.projectname} by {profile.name} <br />
-                  <span className="text-white" style={{ fontSize: '1rem' }}>
-                     {profile.skills ? profile.skills.length : 0}{' '}
-                    people interested
-                    {profile.skills && profile.skills.length === 1 ? '' : ''}
-                  </span>
-                </h4>
+            <div key={profile._id} class="rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="https://picsum.photos/250/250" alt="randompic"></img>
+      <div class="px-6 py-4">
+                <div class="font-bold text-xl">{profile.projectname} by {profile.name} </div>
 
-                <Link
-                  className="btn btn-block btn-squared btn-light text-dark"
-                  to={`/profiles/${profile._id}`}
-                >
-                  Give Feedback and see what others are saying
+                <p class="text-gray-850">
+                  {profile.skills ? profile.skills.length : 0}{' '}
+                  people interested
+                  {profile.skills && profile.skills.length === 1 ? '' : ''}
+                </p>
+
+        <p class="text-gray-700 text-base mt-5">
+          {profile.projectdescription}
+        </p>
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+                <Link class="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 rounded" to={`/profiles/${profile._id}`}>
+                  Join the Discussion
                 </Link>
-              </div>
-            </div>
+      </div>
+      </div>
             
           ))}
       </div>

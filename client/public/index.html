@@ -42,4 +42,64 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+  :root {
+  --primary: #c0c0c0;
+  --secondary: #FF6700;
+  --tertiary: #3A6EA5;
+  --light: #ebebeb;
+  --dark: #004e98;
+}
+    /* @layer utilities {
+            .content-auto {
+              content-visibility: auto;
+            }
+          } */
+  
+      #mainheader {
+        font-weight: bolder;
+        font-size: 80px;
+      }
+  
+      #mantra {
+        font-weight: 400;
+        font-size: x-large;
+      }
+  
+      .center {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+  }
+  .btn {
+  text-align: center;
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  margin: 0;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border: 1px solid transparent;
+  outline: none;
+  color: var(--light);
+  background-color: var(--secondary);
+  margin: 3px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.btn:hover {
+  background-color: orange;
+}
+      </style>
 </html>

@@ -33,3 +33,14 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const REMOVE_PROFILE = gql`
+  mutation removeProfile($name: String!, $email: String!, $password: String!, $projectname: String!, $projectdescription: String!) {
+    removeProfile(name: $name, email: $email, password: $password, projectname: $projectname, projectdescription: $projectdescription) {
+      token
+      profile {
+        _id
+      }
+    }
+  }
+`;

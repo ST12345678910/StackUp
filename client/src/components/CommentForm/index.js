@@ -6,7 +6,7 @@ import { ADD_SKILL } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
-const SkillForm = ({ profileId }) => {
+const CommentForm = ({ profileId }) => {
   const [skill, setSkill] = useState('');
 
   const [addSkill, { error }] = useMutation(ADD_SKILL);
@@ -36,7 +36,7 @@ const SkillForm = ({ profileId }) => {
         >
           <div className="col-12 col-lg-9">
             <input
-              placeholder="What are your thoughts?"
+              placeholder="Leave your thoughts anonymously..."
               value={skill}
               className="form-input w-100"
               onChange={(event) => setSkill(event.target.value)}
@@ -64,4 +64,4 @@ const SkillForm = ({ profileId }) => {
   );
 };
 
-export default SkillForm;
+export default CommentForm;

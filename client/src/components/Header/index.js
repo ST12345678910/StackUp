@@ -10,47 +10,47 @@ const Header = () => {
   };
   return (
     
-    <header className="bg-info text-dark mb-4 py-3 display-flex align-center">
+    <header className="text-dark mb-4 py-3 display-flex align-center">
+      
       <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-        <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
-            This is a title
-          </h1>
-        </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          title text blah blah
-        </p>
+        
         <div>
           {Auth.loggedIn() ? (
-            <><Link className="btn btn-lg btn-light m-2" to="/">
+            <><Link className="btn" to="/">
               About Us
             </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/">
+              <Link className="btn" to="/">
                 Projects
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to={`/profiles/${Auth.getProfile().data._id}`}>
+              <Link className="btn" to={`/profiles/${Auth.getProfile().data._id}`}>
                 {Auth.getProfile().data.name}'s Project
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-              Logout
-            </button> 
+              <button className="btn" onClick={logout}>
+                Logout
+              </button>
             </>
           ) : (
             <>
-                <Link className="btn btn-lg btn-light m-2" to="/about">
-                  About Us
-                </Link>
-                <Link className="btn btn-lg btn-light m-2" to="/">
-                  Projects
-                </Link>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
+              <Link className="btn" to="/">
+                About Us
+              </Link>
+              <Link className="btn" to="/">
+                Projects
+              </Link>
+              <Link className="btn" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn" to="/signup">
                 Signup
               </Link>
             </>
           )}
+        </div>
+
+        <div class="font-Titillium Web">
+          <h1 id="mainheader" class="text-center m-10">Stack Up</h1>
+          <h3 id="mantra" class="text-center">See how your projects and ideas Stack Up against the rest!</h3>
+          <h3 class="mt-16 -mb-12">-Trending Projects-</h3>
         </div>
       </div>
     </header>

@@ -1708,3 +1708,11 @@ label form [type='radio'] {
   }
 }
 
+:root {
+  --primary: #B0D0D3;
+  --secondary: #F7AF9D;
+  --tertiary: #F7E3AF;
+  --light-dark: #F3EEC3;
+  --dark: #a34462;
+  --border-radius: 0.3rem;
+}

@@ -21,7 +21,7 @@ const About = () => {
 
         {/* card one */}
         <div className="card col-5 m-3 p-0" >
-          <h4 className="card-header bg-primary text-light p-2 m-0">Shaun Tehranchi
+          <h4 className="card-header bg-primary text-light p-2 m-0 ">Shaun Tehranchi
             <br />
             <span style={{ fontSize: '1rem' }}>
               Full-stack Developer

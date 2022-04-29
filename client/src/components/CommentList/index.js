@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SkillsList = ({ skills }) => {
+const CommentList = ({ skills }) => {
   if (!skills.length) {
     return <h3>No one is here...</h3>;
   }
@@ -23,4 +23,4 @@ const SkillsList = ({ skills }) => {
   );
 };
 
-export default SkillsList;
+export default CommentList;

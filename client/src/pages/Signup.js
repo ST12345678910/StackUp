@@ -45,7 +45,12 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up and Add a Project</h4>
+          <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign Up and add your Project</h2>
+          <p class="mt-2 text-center text-sm text-gray-600">
+            Or
+            <a href="/login" class="font-medium text-indigo-600 hover:text-indigo-500"> Already a User? Click Here to
+              Log in </a>
+          </p>
           <div className="card-body">
             {data ? (
               <p>
@@ -53,55 +58,62 @@ const Signup = () => {
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
-              <form onSubmit={handleFormSubmit}>
+                <form onSubmit={handleFormSubmit} class="mt-8 space-y-6">
+                  <div class="rounded-md shadow-sm -space-y-px">
+                  <div>
                 <input
-                  className="form-input"
+                    className="form-input appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Your username"
                   name="name"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
-                />
+                /></div>
+                <div>
                 <input
-                  className="form-input"
+                    className="form-input appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                   placeholder="Your email"
                   name="email"
                   type="email"
                   value={formState.email}
                   onChange={handleChange}
-                />
+                /></div>
+                <div>
                   <input
-                    className="form-input"
+                    className="form-input appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                     placeholder="Password"
                     name="password"
                     type="password"
                     value={formState.password}
                     onChange={handleChange}
-                  />
+                  /></div>
+                  <div>
                   <input
-                    className="form-input"
-                    placeholder="Project Name"
+                    className="form-input appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="What is your Project Name?"
                     name="projectname"
                     type="text"
                     value={formState.projectname}
                     onChange={handleChange}
-                  />
+                  /></div>
+                  <div>
                   <input
-                    className="form-input"
-                    placeholder="Project Description"
+                    className="form-input appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                    placeholder="Briefly describe your project..."
                     name="projectdescription"
                     type="text"
                     value={formState.projectdescription}
                     onChange={handleChange}
-                  />
-                
+                  /></div>
+                <div>
                 <button
-                  className="btn btn-block btn-info"
+                    className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-orange-500 hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
                   Submit
-                </button>
+                </button></div>
+                  </div>
               </form>
             )}
 

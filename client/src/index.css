@@ -1789,3 +1789,7 @@ label form [type='radio'] {
     align-content: center;
   }
 }
+
+#signupInputTextArea {
+  min-height: 200px;
+}

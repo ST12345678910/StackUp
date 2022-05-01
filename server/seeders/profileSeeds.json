@@ -3,6 +3,6 @@
     "name": "Test User",
     "email": "test@test.com",
     "password": "password01",
-    "skills": ["AWK", "AMPL", "Unix"]
+    "skills": ["Test", "Test", "Test"]
   }
 ]

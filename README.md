@@ -23,5 +23,5 @@ Deployment Date (TBD)
 ## Tests
  N/A
 ## Questions
-If you have any questions about the project or repository, open an issue or contact us directly at <code>shaun.tehranchi@gmail.com, blank, blank, blank</code>. Find more of our projects @ <code>ST12345678910, blank, blank, blank</code>
+If you have any questions about the project or repository, open an issue or contact us directly at <code>shaun.tehranchi@gmail.com, seankennethcruz@gmail.com, blank, blank</code>. Find more of our projects @ <code>ST12345678910, skcruzer, blank, blank</code>
  

@@ -1,5 +1,5 @@
 # Stack Up
-*NOTE: currently there are issues with deployment through Heroku, app will be deployed as soon as they are resolved*
+*NOTE: Heroku, the apps host, is currently having security issues. The app will be redeployed when the issues have been resolved; TBD*
 
 <img src="https://img.shields.io/badge/License-MIT-blue.svg">
 

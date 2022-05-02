@@ -15,7 +15,7 @@ const CommentForm = ({ profileId }) => {
     event.preventDefault();
 
     try {
-      const data = await addSkill({
+      await addSkill({
         variables: { profileId, skill },
       });
 

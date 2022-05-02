@@ -1,8 +1,12 @@
 # Stack Up
+*NOTE: currently there are issues with deployment through Heroku, app will be deployed as soon as they are resolved*
+
 <img src="https://img.shields.io/badge/License-MIT-blue.svg">
 
 ## Description
  Are you a developer looking to generate interest in your projects and ideas? Is your business looking for creative and talented individuals? At Stack Up passionate developers are invited to flex their talents and innovative ideas, while receiving real feedback from other community members. Get excited about new concepts, network with like-minded individuals, and get your projects peer reviewed, all in one place...
+ 
+ ![Demo Gif]()
 
 ## Table of Contents
 - [Installation](#installation)

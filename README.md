@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/License-MIT-blue.svg">
 
 ## Description
- Are you a developer looking to generate interest in your projects and ideas? Is your business looking for creative and talented individuals? At Stack Up passionate developers are invited to flex their talents and innovative ideas, while receiving real feedback from other community members. Get excited about new concepts, network with like-minded individuals, and get your projects peer reviewed, all in one place...
+ Are you a developer with an innovative idea, looking for honest feedback? Is your business looking to invest in the next big thing? Head on over to Stack Up where we invite passionate developers to flex their talents by posting their projects to receive real feedback from other community members. At Stack Up, we provide an environment where people can get excited about new concepts, network with like-minded individuals, and see how your projects and ideas stack up against the rest!
  
  ![Demo Gif](./demogif.gif)
 

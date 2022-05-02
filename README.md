@@ -6,7 +6,7 @@
 ## Description
  Are you a developer looking to generate interest in your projects and ideas? Is your business looking for creative and talented individuals? At Stack Up passionate developers are invited to flex their talents and innovative ideas, while receiving real feedback from other community members. Get excited about new concepts, network with like-minded individuals, and get your projects peer reviewed, all in one place...
  
- ![Demo Gif]()
+ ![Demo Gif](./demogif.gif)
 
 ## Table of Contents
 - [Installation](#installation)

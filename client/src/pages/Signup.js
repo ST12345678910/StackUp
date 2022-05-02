@@ -45,6 +45,7 @@ const Signup = () => {
     <main className="flex-row justify-center mb-4">
       <div className="col-12 col-lg-10">
         <div className="">
+          <img src="stackuplogo.png" alt="Logo" id="loginlogo" />
           <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign Up and add your Project</h2>
           <p class="mt-2 text-center text-sm text-gray-600">
             Or

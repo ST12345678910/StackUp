@@ -47,7 +47,7 @@ const Header = () => {
           )}
         </div>
 
-        <div class="font-Titillium Web">
+        <div class="font-Titillium Web text-center justify-content-center">
           <h1 id="mainheader" class="text-center m-10">Stack Up</h1>
           <h3 id="mantra" class="text-center">See how your projects and ideas Stack Up against the rest!</h3>
         </div>

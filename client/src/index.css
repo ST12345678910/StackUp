@@ -1793,3 +1793,12 @@ label form [type='radio'] {
 #signupInputTextArea {
   min-height: 200px;
 }
+
+#loginlogo {
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 20%;
+}

@@ -23,7 +23,7 @@ const Profile = () => {
 if (Auth.loggedIn()) {
   if (profileId === Auth.getProfile().data._id) {
     return <div>
-      <h2 className="card-header">
+      <h2 id="mantra" className="text-center mb-5">
         {profile.projectname}
       </h2>
       <h2 className="card-header">
@@ -41,7 +41,7 @@ if (Auth.loggedIn()) {
 }
   return (
     <div>
-      <h2 id="mantra" className="text-center">
+      <h2 id="mantra" className="text-center mb-5">
         {profile.projectname}
       </h2>
       <h2 className="card-header">

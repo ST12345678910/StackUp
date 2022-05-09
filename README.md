@@ -1,4 +1,4 @@
-# Stack Up
+# Stack Up | [Deployed](https://stackupapp.netlify.app)
 *NOTE: Heroku, the apps backend host, is currently having issues connecting with Github. Full site functionality will return: TBD*
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c49080f7-e3c1-4d5d-b5dc-15e567245199/deploy-status)](https://app.netlify.com/sites/stackupapp/deploys)

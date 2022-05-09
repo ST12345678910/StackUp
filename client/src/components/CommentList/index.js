@@ -1,4 +1,5 @@
 import React from 'react';
+import Auth from '../../utils/auth';
 const CommentList = ({ skills }) => {
   if (!skills.length) {
     return <h3>No one is here...</h3>;
